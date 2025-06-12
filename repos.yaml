@@ -1,0 +1,14 @@
+./odoo:
+  defaults:
+    depth: 1
+  remotes:
+    odoo: https://github.com/odoo/odoo.git
+  merges:
+    - odoo 16.0
+./OpenUpgrade:
+  defaults:
+    depth: 1
+  remotes:
+    oca: https://github.com/OCA/OpenUpgrade.git
+  merges:
+    - oca 16.0
