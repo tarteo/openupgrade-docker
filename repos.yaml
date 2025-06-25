@@ -12,3 +12,8 @@
     oca: https://github.com/OCA/OpenUpgrade.git
   merges:
     - oca 18.0
+./design-themes:
+  remotes:
+    odoo: https://github.com/odoo/design-themes.git
+  merges:
+    - odoo 18.0
