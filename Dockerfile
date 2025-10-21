@@ -39,7 +39,8 @@ RUN apt-get install -y \
     curl \
     gnupg2 \
     git \
-    gettext
+    gettext \
+    jq
 
 # Install pg client
 RUN curl -SL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
