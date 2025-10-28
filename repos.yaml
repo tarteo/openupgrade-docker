@@ -1,10 +1,12 @@
 ./odoo:
   defaults:
-    depth: 1
+    depth: 20
   remotes:
     odoo: https://github.com/odoo/odoo.git
+    tarteo: https://github.com/tarteo/odoo.git
   merges:
     - odoo 16.0
+    - tarteo patch-3
 ./OpenUpgrade:
   defaults:
     depth: 1
