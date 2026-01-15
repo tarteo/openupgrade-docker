@@ -6,7 +6,7 @@
     tarteo: https://github.com/tarteo/odoo.git
   merges:
     - odoo 16.0
-    - tarteo patch-3
+    - tarteo 16.0-explicit-db-restore-fail
 ./OpenUpgrade:
   defaults:
     depth: 1
