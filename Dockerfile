@@ -67,7 +67,9 @@ COPY --chown=odoo:odoo repos.yaml odoo.cfg.tpl entrypoint.sh wait_for_pg.sh ./
 RUN chmod +x entrypoint.sh wait_for_pg.sh
 
 # Aggregate Odoo and OpenUpgrade
-RUN gitaggregate -c repos.yaml
+RUN git config --global user.email "bot@onestein.nl" && \
+    git config --global user.name "Bot" && \
+    gitaggregate -c repos.yaml
 
 # Install requirements
 RUN sed -i -E "s/(gevent==)21\.8\.0( ; sys_platform != 'win32' and python_version > '3.9' and python_version <= '3.10')/\122.10.2\2/;s/(greenlet==)1.1.2( ; sys_platform != 'win32' and python_version  > '3.9' and python_version <= '3.10')/\12.0.2\2/" odoo/requirements.txt && \
